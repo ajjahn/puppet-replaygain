@@ -6,7 +6,7 @@ class replaygain::install {
 
   file { "/tmp/aacgain.deb":
     ensure => present,
-    source => "puppet:///modules/${module_name}/aacgain_1.9-0.0medibuntu1_amd64.deb",
+    source => "puppet:///modules/${module_name}/aacgain_1.9-0.0medibuntu1_${::architecture}.deb",
   }
 
   package { "aacgain":
